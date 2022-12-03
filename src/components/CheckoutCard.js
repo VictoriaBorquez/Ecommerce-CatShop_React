@@ -8,26 +8,18 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import Tooltip from '@mui/material/Tooltip';
+import DeleteIcon from '@mui/icons-material/Delete';
 import { actionTypes } from '../reducer';
 import {useStateValue} from "../StateProvider"
 import accounting from "accounting";
 
-export default function Product({product: {id, name, price, image, description}}) {
-
+export default function CheckoutCard({product: {id, name, price, image, description}}) {
   const [{basket}, dispatch] = useStateValue();
 
-  const addToBasket = () => {
-    dispatch({
-      type: actionTypes.ADD_TO_BASKET,
-      item: {
-        id,
-        name,
-        image,
-        price,
-        description,
-      }
-    })
-  }
+  const removeItem = () => dispatch({
+    type: actionTypes.REMOVE_ITEM,
+    id,
+  })
 
   return (
     <Card sx={{ maxWidth: 345}} >
@@ -46,11 +38,9 @@ export default function Product({product: {id, name, price, image, description}}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-      <Tooltip title="Agregar al carrito de compra" arrow>
-        <IconButton aria-label="add to favorites" color="success" onClick={(addToBasket)}>
-          <AddShoppingCartIcon/>
+        <IconButton>
+            <DeleteIcon onClick={removeItem}/>
         </IconButton>
-      </Tooltip>
       </CardActions>
     </Card>
   );

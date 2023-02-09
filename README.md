@@ -1,16 +1,19 @@
 
-## Available Scripts
+# E-commerce simple - React  <img src="https://user-images.githubusercontent.com/66185308/217849249-3539ad82-1b5c-4599-ba09-620b04bb6782.png" width="80">
+Aplicación web en React de un e-commerce de venta de gatitos :cat:. Catálogo y carrito de compras.
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## :clapper: Demo
+![cat_ecommerce](https://user-images.githubusercontent.com/66185308/217848952-04d9b776-c86d-4196-b93e-51d9dfa35c07.gif)
 
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-# Ecommerce-CatShop_React
+
+
+
+## Runs the app:
+`npm start`
+
+Open http://localhost:3000 to view it in your browser.
+
+
+
